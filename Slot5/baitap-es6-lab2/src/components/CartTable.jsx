@@ -65,4 +65,4 @@ const CartTable = () => {
   );
 };
 
-export default CartTable;
+export default CartTable ;
