@@ -20,7 +20,7 @@ const borderClass = age >= 18 ? 'border-success' : 'border-warning';
 const WelcomeCard = () => {
   return (
     <Card className={`shadow-sm ${borderClass}`} style={{ maxWidth: 400 }}>
-      <Card.Header>Thẻ sinh viên</Card.Header>
+      <Card.Header>Thẻ sinh viênn</Card.Header>
       <Card.Body>
         <Card.Title>{greeting}</Card.Title>
         <Card.Text>
