@@ -4,6 +4,8 @@ import {
   StudentCard,
   CartTable,
   RegisterForm,
+  AppButton,
+  InputField,
 } from './components';
 import HomePage from './pages/HomePage';
 
@@ -60,13 +62,39 @@ function App() {
 
       <hr className="my-5" />
 
-      {/* 4. Bài 7: Bảng giỏ hàng */}
+      {/* 4. Bài 6: AppButton và InputField */}
+      <h3 className="mb-3">Bài 6: AppButton và InputField (Spread & Rest)</h3>
+      <div className="card p-4 mb-5 shadow-sm" style={{ maxWidth: 500 }}>
+        <InputField
+          id="contactEmail"
+          label="Email liên hệ"
+          type="email"
+          placeholder="name@example.com"
+          required
+          helpText="Chúng tôi không bao giờ chia sẻ email của bạn cho người khác."
+        />
+        <InputField
+          id="contactPhone"
+          label="Số điện thoại"
+          type="tel"
+          placeholder="09xx xxx xxx"
+        />
+        <div className="d-flex gap-2 mt-2">
+          <AppButton>Nút mặc định</AppButton>
+          <AppButton variant="danger" size="sm">Nút Danger nhỏ</AppButton>
+          <AppButton disabled>Nút Disabled</AppButton>
+        </div>
+      </div>
+
+      <hr className="my-5" />
+
+      {/* 5. Bài 7: Bảng giỏ hàng */}
       <h3 className="mb-3">Bài 7: CartTable (Filter, Sort, Reduce)</h3>
       <CartTable />
 
       <hr className="my-5" />
 
-      {/* 5. Bài 8: Form đăng ký từ config */}
+      {/* 6. Bài 8: Form đăng ký */}
       <h3 className="mb-3">Bài 8: RegisterForm (Spread props, Dynamic)</h3>
       <RegisterForm />
     </Layout>
