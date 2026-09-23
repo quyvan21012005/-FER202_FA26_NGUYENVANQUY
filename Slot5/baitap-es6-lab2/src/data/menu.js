@@ -4,4 +4,4 @@ export const menuItems = [
   { label: 'Sản phẩm', href: '#products' },
   { label: 'Giỏ hàng', href: '#cart' },
   { label: 'Đăng ký', href: '#register' },
-];
+]  ;

@@ -15,4 +15,4 @@ const Layout = ({ children, title = 'Trang chủ' }) => {
   );
 };
 
-export default Layout;
+export default Layout ;
