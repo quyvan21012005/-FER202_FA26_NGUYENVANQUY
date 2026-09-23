@@ -1,5 +1,5 @@
 export const products = [
-  { id: 1, name: 'Tai nghe Bluetooth', price: 590000, category: { name: 'Âm thanh' }, inStock: true, discount: 10, rating: { rate: 4.5, count: 120 }, image: 'https://picsum.photos/seed/p1/300/200' },
+  { id: 1, name: 'Tai nghe Bluetoothh', price: 590000, category: { name: 'Âm thanh' }, inStock: true, discount: 10, rating: { rate: 4.5, count: 120 }, image: 'https://picsum.photos/seed/p1/300/200' },
   { id: 2, name: 'Chuột không dây', price: 250000, category: { name: 'Phụ kiện' }, inStock: true, discount: 0, rating: { rate: 4.2, count: 85 }, image: 'https://picsum.photos/seed/p2/300/200' },
   { id: 3, name: 'Bàn phím cơ', price: 1250000, category: { name: 'Phụ kiện' }, inStock: false, discount: 0, rating: { rate: 4.8, count: 210 }, image: 'https://picsum.photos/seed/p3/300/200' },
   { id: 4, name: 'Màn hình 24 inch', price: 3490000, category: { name: 'Màn hình' }, inStock: true, discount: 15, rating: { rate: 4.4, count: 64 }, image: 'https://picsum.photos/seed/p4/300/200' },
