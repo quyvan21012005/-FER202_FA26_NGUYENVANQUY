@@ -20,7 +20,7 @@ const StudentCard = ({ student }) => {
         <Card.Subtitle className="mb-2 text-muted">{id} - {major}</Card.Subtitle>
       </Card.Body>
       <ListGroup variant="flush">
-        <ListGroup.Item>GPAA: {gpa}</ListGroup.Item>
+        <ListGroup.Item>GPA: {gpa}</ListGroup.Item>
         <ListGroup.Item>Email: {studentEmail}</ListGroup.Item>
         <ListGroup.Item>SĐT: {phone}</ListGroup.Item>
       </ListGroup>

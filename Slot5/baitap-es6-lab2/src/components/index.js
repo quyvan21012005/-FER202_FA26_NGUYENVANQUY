@@ -8,4 +8,4 @@ export { default as ProductList } from './ProductList';
 export { default as AppButton } from './AppButton';
 export { default as InputField } from './InputField';
 export { default as CartTable } from './CartTable';
-export { default as RegisterForm } from './RegisterForm';
+export { default as RegisterForm } from './RegisterForm'  ;
