@@ -8,4 +8,4 @@ export const fields = [
 ];
 
 export const genders = ['Nam', 'Nữ', 'Khác'];
-export const majors = ['Software Engineering', 'Artificial Intelligence', 'Digital Marketing'];
+export const majors = ['Software Engineering', 'Artificial Intelligence', 'Digital Marketing'] ;

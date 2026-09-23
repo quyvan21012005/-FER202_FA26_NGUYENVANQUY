@@ -95,7 +95,7 @@ function App() {
       <hr className="my-5"  />
 
       {/* 6. Bài 8: Form đăng ký */}
-      <h3 className="mb-3">Bài 8: RegisterForm (Spread props, Dynamic)</h3>
+      <h3 className="mb-3">Bài 8: RegisterForm (Spread props, Dynamic) </h3>
       <RegisterForm />
     </Layout>
   );
