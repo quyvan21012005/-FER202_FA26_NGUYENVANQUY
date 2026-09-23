@@ -11,6 +11,6 @@ const InputField = ({ id, label, helpText, ...inputProps }) => (
     <Form.Control {...inputProps} />
     {helpText && <Form.Text className="text-muted">{helpText}</Form.Text>}
   </Form.Group>
-);
+) ;
 
 export default InputField;
