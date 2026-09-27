@@ -1,0 +1,84 @@
+/* Tùy chỉnh màu nền toàn trang tối */
+body {
+  background-color: #333333;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Thẻ Card */
+.custom-card {
+  border-radius: 0;
+  border: none;
+  overflow: hidden;
+}
+
+/* Badge SALE / NEW màu vàng góc trên ảnh */
+.card-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f7ca18;
+  color: #111111;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 14px;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+/* Giá niêm yết & giá khuyến mãi */
+.price-del {
+  text-decoration: line-through;
+  color: #888888;
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+.price-current {
+  color: #df9e19;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Nút Buy */
+.btn-buy {
+  background-color: #38424d;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.btn-buy:hover {
+  background-color: #272f38;
+  color: #ffffff;
+}
+
+/* Form đặt bàn */
+.form-custom input,
+.form-custom select,
+.form-custom textarea {
+  border-radius: 2px;
+  border: 1px solid #ced4da;
+}
+
+.btn-send {
+  background-color: #e59819;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.btn-send:hover {
+  background-color: #cf840d;
+  color: #ffffff;
+}
+
+/* Khung chữ trên Carousel */
+.carousel-caption-box {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 16px 28px;
+  border-radius: 4px;
+  display: inline-block;
+}
