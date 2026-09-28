@@ -3,10 +3,11 @@ import { Container, Nav } from 'react-bootstrap';
 import FaqAccordion from './components/FaqAccordion';
 import ReviewForm from './components/ReviewForm';
 import BmiCalculator from './components/BmiCalculator';
+import StudentManager from './components/StudentManager';
 
 function App() {
-  // State chuyển đổi giữa các bài tập: 'ex1' | 'ex2' | 'ex3'
-  const [activeTab, setActiveTab] = useState('ex3');
+  // State chuyển đổi giữa các bài tập: 'ex1' | 'ex2' | 'ex3' | 'ex4'
+  const [activeTab, setActiveTab] = useState('ex4');
 
   return (
     <div className="min-vh-100 bg-light">
@@ -36,6 +37,11 @@ function App() {
                 Bài 3: Máy tính BMI
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="ex4" className="fw-medium">
+                Bài 4: Quản lý điểm SV
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Container>
       </div>
@@ -45,6 +51,7 @@ function App() {
         {activeTab === 'ex1' && <FaqAccordion />}
         {activeTab === 'ex2' && <ReviewForm />}
         {activeTab === 'ex3' && <BmiCalculator />}
+        {activeTab === 'ex4' && <StudentManager />}
       </div>
     </div>
   );
