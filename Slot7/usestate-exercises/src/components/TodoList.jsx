@@ -2,109 +2,156 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 
 export default function TodoList() {
-  // Khởi tạo state với 2 công việc có sẵn giống trong hình mẫu
+  // Khởi tạo state danh sách công việc ban đầu đúng theo hình mẫu đề bài
   const [tasks, setTasks] = useState([
     { id: 1, text: 'Học lập trình .NET' },
-    { id: 2, text: 'Học lập trình Java' }
+    { id: 2, text: 'Học lập trình Java' },
   ]);
-  
-  // State quản lý ô nhập liệu
+
+  // State quản lý giá trị ô nhập liệu (Controlled Input)
   const [inputValue, setInputValue] = useState('');
 
-  // Hàm xử lý thêm Todo
+  // Hàm thêm công việc mới (dùng functional update để đảm bảo an toàn state)
   const handleAdd = () => {
-    if (inputValue.trim() === '') return;
-    setTasks([...tasks, { id: Date.now(), text: inputValue }]);
-    setInputValue(''); // Xóa ô input sau khi thêm
+    const trimmed = inputValue.trim();
+    if (!trimmed) return;
+
+    setTasks((prev) => [...prev, { id: Date.now(), text: trimmed }]);
+    setInputValue(''); // Reset ô input về rỗng
   };
 
-  // Hàm xử lý xóa Todo
+  // Hàm xóa công việc theo id
   const handleDelete = (id) => {
-    setTasks(tasks.filter(task => task.id !== id));
+    setTasks((prev) => prev.filter((task) => task.id !== id));
+  };
+
+  // Hỗ trợ bấm phím Enter để thêm công việc
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleAdd();
+    }
   };
 
   return (
     <div
       style={{
-        backgroundColor: '#282c34', // Nền tối
+        backgroundColor: '#282c34', // Nền tối chuẩn theo hình mẫu
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        paddingTop: '100px',
+        paddingTop: '80px',
+        paddingLeft: '20px',
+        paddingRight: '20px',
       }}
     >
-      <div 
-        style={{ 
-          display: 'flex', 
-          gap: '60px', // Khoảng cách giữa phần nhập và phần danh sách
+      <div
+        style={{
+          display: 'flex',
+          gap: '50px',
           alignItems: 'flex-start',
           flexWrap: 'wrap',
-          justifyContent: 'center'
+          justifyContent: 'center',
         }}
       >
-        {/* Phần bên trái: Ô input và nút Add Todo */}
-        <div style={{ display: 'flex', gap: '15px' }}>
+        {/* Khối bên trái: Ô input và nút Add Todo */}
+        <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
           <Form.Control
             type="text"
             placeholder="Please input a Task"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            style={{ width: '280px', borderRadius: '4px' }}
+            onKeyDown={handleKeyDown}
+            style={{
+              width: '300px',
+              height: '42px',
+              borderRadius: '4px',
+              fontSize: '16px',
+            }}
           />
           <Button
             onClick={handleAdd}
-            style={{ 
-              backgroundColor: '#dc3545', // Màu đỏ giống mẫu
+            style={{
+              backgroundColor: '#dc3545', // Màu đỏ giống đề bài
               borderColor: '#dc3545',
-              padding: '6px 20px'
+              height: '42px',
+              padding: '0 24px',
+              fontSize: '16px',
+              fontWeight: '500',
+              borderRadius: '6px',
             }}
           >
             Add Todo
           </Button>
         </div>
 
-        {/* Phần bên phải: Thẻ Todo List */}
+        {/* Khối bên phải: Card Todo List */}
         <div
           style={{
-            backgroundColor: '#f8f9fa', // Nền trắng xám nhạt của thẻ
-            padding: '25px',
+            backgroundColor: '#f8f9fa',
+            padding: '24px',
             borderRadius: '8px',
-            minWidth: '350px'
+            width: '380px',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
           }}
         >
-          <h5 style={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '20px', color: '#000' }}>
+          <h4
+            style={{
+              textAlign: 'center',
+              fontWeight: 'bold',
+              marginBottom: '20px',
+              color: '#000000',
+            }}
+          >
             Todo List
-          </h5>
-          
+          </h4>
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {tasks.map(task => (
-              <div 
-                key={task.id} 
+            {tasks.map((task) => (
+              <div
+                key={task.id}
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   backgroundColor: '#ffffff',
-                  padding: '10px 15px',
+                  padding: '12px 16px',
+                  borderRadius: '6px',
                   border: '1px solid #dee2e6',
-                  borderRadius: '4px',
-                  color: '#000'
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+                  color: '#000000',
                 }}
               >
-                <span>{task.text}</span>
+                <span style={{ fontSize: '18px', fontWeight: '400' }}>
+                  {task.text}
+                </span>
                 <Button
                   size="sm"
                   onClick={() => handleDelete(task.id)}
-                  style={{ 
-                    backgroundColor: '#dc3545', 
+                  style={{
+                    backgroundColor: '#dc3545',
                     borderColor: '#dc3545',
-                    padding: '4px 15px'
+                    padding: '4px 16px',
+                    fontSize: '14px',
+                    borderRadius: '4px',
                   }}
                 >
                   Delete
                 </Button>
               </div>
             ))}
+
+            {tasks.length === 0 && (
+              <div
+                style={{
+                  textAlign: 'center',
+                  color: '#6c757d',
+                  padding: '12px',
+                  fontStyle: 'italic',
+                }}
+              >
+                No tasks available. Add some above!
+              </div>
+            )}
           </div>
         </div>
       </div>
