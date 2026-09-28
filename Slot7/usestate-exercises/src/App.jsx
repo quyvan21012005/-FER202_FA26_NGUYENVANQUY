@@ -1,9 +1,9 @@
-import TodoList from './components/TodoList';
+import ControlledInput from './components/ControlledInput';
 
 function App() {
   return (
     <div>
-      <TodoList />
+      <ControlledInput />
     </div>
   );
 }
