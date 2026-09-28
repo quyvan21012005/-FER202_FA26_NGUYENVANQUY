@@ -1,9 +1,9 @@
-import TodoList from './components/TodoList';
+import ToggleVisibility from './components/ToggleVisibility';
 
 function App() {
   return (
     <div>
-      <TodoList />
+      <ToggleVisibility />
     </div>
   );
 }
