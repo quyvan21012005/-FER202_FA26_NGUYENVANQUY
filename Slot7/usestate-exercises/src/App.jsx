@@ -1,9 +1,9 @@
-import ReviewForm from './components/ReviewForm';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
     <div>
-      <ReviewForm />
+      <TodoList />
     </div>
   );
 }
