@@ -27,7 +27,7 @@ function App() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="ex2" className="fw-medium">
-                Bài 2: Đánh giá sao
+                Bài 2:  Đánh giá sao
               </Nav.Link>
             </Nav.Item>
           </Nav>
