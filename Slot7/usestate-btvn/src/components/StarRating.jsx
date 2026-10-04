@@ -38,8 +38,8 @@ export default function StarRating({ value = 0, onChange, max = 5 }) {
 
       {/* Nhãn mô tả cảm xúc đánh giá */}
       <span className="text-secondary small mt-1 fw-semibold">
-        {LABELS[display] || LABELS[0]}
+        {LABELS[display] ||  LABELS[0]}
       </span>
     </div>
-  );
+   );
 }
