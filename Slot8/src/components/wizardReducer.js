@@ -8,7 +8,7 @@ export const SCHEDULES = ['Sáng 2-4-6', 'Tối 3-5-7', 'Cuối tuần'];
 
 export const STEPS = ['Thông tin', 'Khóa học', 'Xác nhận'];
 
-// Trường thuộc từng bước: NEXT chỉ kiểm tra các trường của bước hiện tại
+// Trường thuộc từng bước:   NEXT chỉ kiểm tra các trường của bước hiện tại
 const STEP_FIELDS = [
   ['fullName', 'email', 'phone'],
   ['courseId', 'schedule'],

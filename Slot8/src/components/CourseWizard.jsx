@@ -13,7 +13,7 @@ const formatVND = (n) =>
     : '';
 
 const CourseWizard = ({ initialCourseId = 'react' }) => {
-  // useReducer(reducer, đối số cho init, hàm init)
+  // useReducer (reducer, đối số cho init, hàm init)
   const [state, dispatch] = useReducer(wizardReducer, initialCourseId, initWizard);
   const { step, maxVisited, values, errors, submitted } = state;
   const course = COURSES.find((c) => c.id === values.courseId);
