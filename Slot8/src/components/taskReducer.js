@@ -23,7 +23,7 @@ export const initialTaskState = {
   ],
 };
 
-// Action creators: gom việc tạo action vào một chỗ
+// Action creators: gom việc tạoo action vào một chỗ
 export const addTask = (title, priority) => ({
   type: TASK_ACTIONS.ADD,
   payload: { title, priority },

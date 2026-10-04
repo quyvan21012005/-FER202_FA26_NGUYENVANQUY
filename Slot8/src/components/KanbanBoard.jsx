@@ -89,7 +89,7 @@ const KanbanBoard = () => {
           <Form onSubmit={handleAdd}>
             <InputGroup>
               <Form.Control
-                placeholder="Tên công việc mới..."
+                placeholder="Tên  công việc mới..."
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
