@@ -8,17 +8,17 @@ import Form from 'react-bootstrap/Form';
 
 // Máy trạng thái: mỗi trạng thái cho phép những sự kiện nào, đi tới đâu
 const TRANSITIONS = {
-  pending:   { CONFIRM: 'confirmed', CANCEL: 'cancelled' },
+  pending: { CONFIRM: 'confirmed', CANCEL: 'cancelled' },
   confirmed: { SHIP: 'shipping', CANCEL: 'cancelled' },
-  shipping:  { DELIVER: 'delivered' },
+  shipping: { DELIVER: 'delivered' },
   delivered: {},
   cancelled: {},
 };
 
 const STATUS_INFO = {
-  pending:   { label: 'Chờ xác nhận', bg: 'secondary' },
+  pending: { label: 'Chờ xác nhận', bg: 'secondary' },
   confirmed: { label: 'Đã xác nhận', bg: 'primary' },
-  shipping:  { label: 'Đang giao', bg: 'warning' },
+  shipping: { label: 'Đang giao', bg: 'warning' },
   delivered: { label: 'Đã giao', bg: 'success' },
   cancelled: { label: 'Đã hủy', bg: 'danger' },
 };

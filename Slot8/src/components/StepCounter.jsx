@@ -9,7 +9,7 @@ const MAX = 100;
 
 // 1. Hằng số action: gõ sai tên sẽ báo lỗi ngay khi import
 const ACTIONS = {
-  INCREMENT: ' counter/increment',
+  INCREMENT: 'counter/increment',
   DECREMENT: 'counter/decrement',
   SET_STEP: 'counter/setStep',
   RESET: 'counter/reset',
