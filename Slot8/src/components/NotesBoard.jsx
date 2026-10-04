@@ -9,7 +9,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { undoable, createHistory } from './undoable';
 import { notesReducer, initialNotes, COLORS } from './notesReducer';
 
-// Tạo reducer có Undo/Redo một lần, ở ngoài component
+// Tạo reducer có  Undo/Redo một lần, ở ngoài component
 const notesWithHistory = undoable(notesReducer);
 
 const NotesBoard = () => {
