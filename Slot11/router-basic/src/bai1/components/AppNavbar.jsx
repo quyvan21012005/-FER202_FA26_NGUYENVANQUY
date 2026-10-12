@@ -3,10 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 
 const MENU = [
   { to: '/', label: 'Trang chủ' },
-  { to: '/skills', label: 'Kỹ năng' },
-  { to: '/projects', label: 'Dự án' },
+  { to: '/about', label: 'Giới thiệu' },
   { to: '/contact', label: 'Liên hệ' },
-  { to: '/about', label: 'About' },
 ];
 
 const AppNavbar = () => {

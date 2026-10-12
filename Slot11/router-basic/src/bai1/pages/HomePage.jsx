@@ -16,14 +16,14 @@ const HomePage = () => {
               <h1 className="fw-bold mb-3 display-5">Xin chào, mình là Văn Quý</h1>
               <p className="lead text-muted mb-4">
                 Chào mừng bạn đến với portfolio cá nhân của mình! Mình là sinh viên FPT University, 
-                đam mê lập trình web hiện đại với ReactJS, JavaScript và hệ sinh thái Frontend.
+                đam mê lập trình web hiện đại với ReactJS, JavaScript và React Router.
               </p>
               <div className="d-flex justify-content-center gap-3">
-                <Button as={Link} to="/projects" variant="primary" size="lg">
-                  Xem dự án của mình
+                <Button as={Link} to="/about" variant="primary" size="lg">
+                  Xem giới thiệu (About)
                 </Button>
                 <Button as={Link} to="/contact" variant="outline-secondary" size="lg">
-                  Liên hệ
+                  Liên hệ (Contact)
                 </Button>
               </div>
             </Card.Body>
