@@ -13,7 +13,7 @@ const AppNavbar = () => {
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
-          Nguyễn Văn Quý
+          Văn Quý
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="portfolio-navbar" />
         <Navbar.Collapse id="portfolio-navbar">
