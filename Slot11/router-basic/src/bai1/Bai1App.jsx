@@ -26,7 +26,7 @@ const Bai1App = () => {
       {/* Footer chung */}
       <footer className="bg-dark text-white text-center py-3 mt-auto border-top">
         <div className="container">
-          <small>© 2026 Nguyễn Văn Quý – Portfolio Cá Nhân. Thực hành React Router Bài 1.</small>
+          <small>© 2026 Văn Quý – Portfolio Cá Nhân. Thực hành React Router Bài 1.</small>
         </div>
       </footer>
     </div>

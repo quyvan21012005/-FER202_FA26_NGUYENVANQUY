@@ -13,7 +13,7 @@ const HomePage = () => {
                   Frontend Developer & Student
                 </span>
               </div>
-              <h1 className="fw-bold mb-3 display-5">Xin chào, mình là Nguyễn Văn Quý</h1>
+              <h1 className="fw-bold mb-3 display-5">Xin chào, mình là Văn Quý</h1>
               <p className="lead text-muted mb-4">
                 Chào mừng bạn đến với portfolio cá nhân của mình! Mình là sinh viên FPT University, 
                 đam mê lập trình web hiện đại với ReactJS, JavaScript và hệ sinh thái Frontend.
