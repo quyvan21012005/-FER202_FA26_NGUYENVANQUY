@@ -1,0 +1,16 @@
+/* Custom styles for router-basic */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
