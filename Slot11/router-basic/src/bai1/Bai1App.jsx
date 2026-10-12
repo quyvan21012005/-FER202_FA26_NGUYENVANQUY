@@ -5,6 +5,7 @@ import SkillsPage from './pages/SkillsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+import About from './components/About';
 
 const Bai1App = () => {
   return (
@@ -16,6 +17,7 @@ const Bai1App = () => {
       <main className="flex-grow-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
