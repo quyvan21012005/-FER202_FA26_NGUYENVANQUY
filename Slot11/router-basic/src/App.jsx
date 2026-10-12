@@ -1,9 +1,7 @@
+import Bai1App from './bai1/Bai1App';
+
 function App() {
-  return (
-    <div className="container py-4">
-      <h1>router-basic</h1>
-    </div>
-  );
+  return <Bai1App />;
 }
 
 export default App;
