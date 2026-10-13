@@ -1,7 +1,7 @@
-import Bai1App from './bai1/Bai1App';
+import Bai3App from './bai3/Bai3App';
 
 function App() {
-  return <Bai1App />;
+  return <Bai3App />;
 }
 
 export default App;
