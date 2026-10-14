@@ -1,0 +1,32 @@
+export const BOOKS = [
+  {
+    id: 'BK001',
+    title: 'Lập Trình Web Hiện Đại với React & TypeScript',
+    author: 'Robin Wieruch',
+    category: 'Công nghệ thông tin',
+    year: 2024,
+    status: 'Có sẵn',
+    shelf: 'Kệ A3 - Tầng 2',
+    description: 'Hướng dẫn toàn diện về React hiện đại, Hooks, State Management và tích hợp TypeScript cho ứng dụng thực tế.',
+  },
+  {
+    id: 'BK002',
+    title: 'Clean Code: A Handbook of Agile Software Craftsmanship',
+    author: 'Robert C. Martin (Uncle Bob)',
+    category: 'Kỹ thuật phần mềm',
+    year: 2023,
+    status: 'Đang mượn',
+    shelf: 'Kệ B1 - Tầng 2',
+    description: 'Cuốn sách kinh điển về nguyên lý viết code sạch, dễ bảo trì và các best practices dành cho kỹ sư phần mềm chuyên nghiệp.',
+  },
+  {
+    id: 'BK003',
+    title: 'Cấu Trúc Dữ Liệu và Giải Thuật Dành Cho Lập Trình Viên',
+    author: 'Thomas H. Cormen',
+    category: 'Khoa học máy tính',
+    year: 2022,
+    status: 'Có sẵn',
+    shelf: 'Kệ C4 - Tầng 1',
+    description: 'Nền tảng vững chắc về giải thuật, độ phức tạp thuật toán và cấu trúc dữ liệu cốt lõi trong phỏng vấn công nghệ.',
+  },
+];
