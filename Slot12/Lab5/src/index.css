@@ -3,3 +3,16 @@ body {
   min-height: 100vh;
   background-color: #f8f9fa;
 }
+
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
