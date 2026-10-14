@@ -1,21 +1,21 @@
 export const banners = [
   {
     id: 1,
-    image: "https://picsum.photos/id/1018/1200/400",
-    title: "Khám phá Thiên nhiên",
-    description: "Những cung đường kỳ vĩ và cảnh quan tuyệt đẹp đang chờ đón bạn."
+    image: "/images/images.jpg",
+    title: "Áo Đấu CLB Manchester United 2024/25",
+    description: "Chất vải thun mè thể thao co giãn 4 chiều, thấm hút mồ hôi tối đa cho mọi trận cầu."
   },
   {
     id: 2,
-    image: "https://picsum.photos/id/1015/1200/400",
-    title: "Công nghệ Đột phá",
-    description: "Cập nhật những xu hướng công nghệ mới nhất cùng hệ sinh thái hiện đại."
+    image: "/images/images (1).jpg",
+    title: "Áo Đấu Đội Tuyển Ý (Azzurri) Euro",
+    description: "Sắc xanh thiên thanh truyền thống kết hợp họa tiết Phục Hưng độc đáo, phong cách thi đấu chuyên nghiệp."
   },
   {
     id: 3,
-    image: "https://picsum.photos/id/1019/1200/400",
-    title: "Cộng đồng Kết nối",
-    description: "Giao lưu, học hỏi và phát triển cùng cộng đồng sinh viên năng động."
+    image: "/images/images (6).jpg",
+    title: "Áo Đấu Đội Tuyển Argentina 3 Sao",
+    description: "Phiên bản vô địch thế giới với 3 ngôi sao vàng rực rỡ, chất liệu cao cấp và thoáng mát."
   }
 ];
 
