@@ -4,8 +4,6 @@ function Home() {
     <div>
       <MyCarousel />
       {/* Các nội dung bên dưới Carousel như banner chào mừng, thẻ tin tức */}
-
-
     </div>
   );
 }
