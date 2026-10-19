@@ -1,11 +1,14 @@
 import React from 'react';
-import AxiosDemo from './components/AxiosDemo'; // <-- Đường dẫn vào thư mục components
+import AxiosDemo from './components/AxiosDemo';
+import PostList from './components/PostList';
 
 function App() {
   return (
-    <React.StrictMode>
+    <div>
       <AxiosDemo />
-    </React.StrictMode>
+      <hr />
+      <PostList />
+    </div>
   );
 }
 
