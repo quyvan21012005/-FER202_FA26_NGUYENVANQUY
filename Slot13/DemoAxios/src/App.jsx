@@ -1,5 +1,5 @@
 import React from 'react';
-import AxiosDemo from './AxiosDemo';
+import AxiosDemo from './components/AxiosDemo'; // <-- Đường dẫn vào thư mục components
 
 function App() {
   return (
