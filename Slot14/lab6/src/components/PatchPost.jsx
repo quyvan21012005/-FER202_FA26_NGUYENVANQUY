@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import postApi from '../api/postApi';
 
 const PatchPost = () => {
   const [title, setTitle] = useState('');
@@ -12,10 +12,10 @@ const PatchPost = () => {
     setError(null);
     try {
       // PATCH chỉ gửi trường thay đổi
-      const response = await axios.patch('https://jsonplaceholder.typicode.com/posts/1', { title });
+      const response = await postApi.patch(1, { title });
       setResult({ status: response.status, data: response.data });
     } catch (err) {
-      setError(err.message);
+      setError(err.userMessage);
     } finally {
       setSaving(false);
     }

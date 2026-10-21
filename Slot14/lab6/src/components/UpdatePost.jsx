@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import postApi from '../api/postApi';
 
-const URL = 'https://jsonplaceholder.typicode.com/posts/1';
+const POST_ID = 1;
 
 const UpdatePost = () => {
   const [post, setPost] = useState(null);
@@ -13,10 +13,10 @@ const UpdatePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(URL);
+        const response = await postApi.getById(POST_ID);
         setPost(response.data);
       } catch (err) {
-        setError(err.message);
+        setError(err.userMessage);
       }
     };
     fetchPost();
@@ -27,7 +27,7 @@ const UpdatePost = () => {
     setSaving(true);
     setError(null);
     try {
-      const response = await axios.put(URL, {
+      const response = await postApi.update(POST_ID, {
         id: post.id,
         userId: post.userId,
         title: post.title,
@@ -35,7 +35,7 @@ const UpdatePost = () => {
       });
       setResult({ status: response.status, data: response.data });
     } catch (err) {
-      setError(err.message);
+      setError(err.userMessage);
     } finally {
       setSaving(false);
     }

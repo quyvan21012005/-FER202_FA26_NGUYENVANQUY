@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import postApi from '../api/postApi';
 
 const AxiosDemo = () => {
   const [data, setData] = useState(null);
@@ -7,18 +7,16 @@ const AxiosDemo = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // KHÔNG viết useEffect(async () => ...) – khai báo hàm async bên trong rồi gọi
     const fetchPost = async () => {
       try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
-        setData(response.data);
+        const res = await postApi.getById(1); // không còn URL đầy đủ trong component
+        setData(res.data);
       } catch (err) {
-        setError(err.message);
+        setError(err.userMessage); // câu tiếng Việt do interceptor gắn vào
       } finally {
-        setLoading(false); // luôn chạy, dù thành công hay lỗi
+        setLoading(false);
       }
     };
-
     fetchPost();
   }, []);
 

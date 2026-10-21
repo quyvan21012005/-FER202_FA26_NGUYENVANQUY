@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-
-const API = 'https://jsonplaceholder.typicode.com/posts';
+import postApi from '../api/postApi';
 
 const DeletePost = () => {
   const [posts, setPosts] = useState([]);
@@ -11,10 +9,10 @@ const DeletePost = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(API, { params: { _limit: 5 } });
+        const response = await postApi.getAll({ _limit: 5 });
         setPosts(response.data);
       } catch (err) {
-        setError(err.message);
+        setError(err.userMessage);
       }
     };
     fetchPosts();
@@ -23,11 +21,11 @@ const DeletePost = () => {
   const handleDelete = async (id) => {
     if (!window.confirm(`Xóa bài viết #${id}?`)) return; // NC5 sẽ thay bằng Modal
     try {
-      const response = await axios.delete(`${API}/${id}`);
+      const response = await postApi.remove(id);
       setPosts((prev) => prev.filter((p) => p.id !== id)); // cập nhật giao diện
       setMessage(`Đã xóa bài #${id} – Status: ${response.status}`);
     } catch (err) {
-      setError(err.message);
+      setError(err.userMessage);
     }
   };
 
